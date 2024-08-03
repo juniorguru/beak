@@ -1,0 +1,1 @@
+Do budoucna bych chtěl ve společnosti, kde pracuji začít i programovat, technologie, které používáme a chtěl bych se je naučit jsou FastAPI, PostgreSQL a Docker.

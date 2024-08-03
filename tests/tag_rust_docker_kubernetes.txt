@@ -1,0 +1,1 @@
+Zajímají mě novější technologie (Rust například) a rád používám Docker a Kubernetes.

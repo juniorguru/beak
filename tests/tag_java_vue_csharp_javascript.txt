@@ -1,0 +1,1 @@
+Z technologií převážně dělám s Javou a Vue.js. Příležitostně pak dělám na legacy appkách v .NET a knockout.js.

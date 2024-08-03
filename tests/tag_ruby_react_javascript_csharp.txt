@@ -1,0 +1,1 @@
+My jsme měli jiný obor, můj ročník byl poslední s Ruby, Ruby on Rails, Reactem a C# .net, další ročníky měly už jiný obor jen s JavaScriptem a Unicorn frameworkem založeným na Reactu a Expressu.

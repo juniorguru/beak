@@ -10,6 +10,7 @@ class TechTag(StrEnum):
     database = auto()
     docker = auto()
     excel = auto()
+    git = auto()
     hardware = auto()
     html = auto()
     java = auto()
@@ -23,7 +24,8 @@ class TechTag(StrEnum):
     swift = auto()
     testing = auto()
     typescript = auto()
-    windows = auto()
+    dataanalysis = auto()
+    rust = auto()
 
 
 class TechLibTag(StrEnum):
@@ -32,9 +34,7 @@ class TechLibTag(StrEnum):
     django = auto()
     flask = auto()
     kubernetes = auto()
-    mongo = auto()
     mysql = auto()
-    next = auto()
     node = auto()
     pandas = auto()
     postgresql = auto()

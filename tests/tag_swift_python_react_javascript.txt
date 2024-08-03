@@ -1,0 +1,1 @@
+Python a Swift mi prijdou hodne rozdilne, jestli te laka vyvoj pro mobily ci desktop, dal by se zvazit React Native nebo Flutter.

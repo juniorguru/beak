@@ -1,0 +1,13 @@
+Součásti kurzu byly tyto bloky :
+Python: Základy a pokročilé
+techniky
+Software Testing
+Algoritmy a datové struktury
+Databáze a SQL
+Database Programming
+Design patterns a best practices
+Frontendové technologie: HTML,
+CSS, JavaScript
+Frameworks: Django, Flask, SQL
+Alchemy
+Git, Github

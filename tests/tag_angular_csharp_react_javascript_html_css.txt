@@ -1,0 +1,1 @@
+obecně ono davá smysl i kombinace jako  react a dotnet či angular a dotnet.. ono to tak v praxi většinou fungueje, že se napiše v dotnetu backendu webu, a pak se udělá frontend ve angularu či v reactu.

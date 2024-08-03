@@ -1,0 +1,1 @@
+jQuery žije jen zdánlivě díky věcem jako carousely a Bootstrap a tuně WordPress šablon.

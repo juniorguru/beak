@@ -1,0 +1,1 @@
+Přes rok jsem dělal na IDM projektu pro RT jako backend developer v Kotlinu.

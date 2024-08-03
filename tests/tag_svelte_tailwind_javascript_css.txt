@@ -1,0 +1,1 @@
+Ahoj, jsem nadšený SvelteKit člověk, který by rád vybudoval menší eshop nebo jinou web appku. Pracuji s Vite, SvelteKit, čistým JS, Tailwind, DaisyUI, nástroje - Vercel, Supabase, Sanity, Sentry.

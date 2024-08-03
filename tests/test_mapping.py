@@ -23,7 +23,9 @@ assert len(fixtures), "No fixtures found"
 
 @pytest.mark.parametrize("text, expected", fixtures)
 def test_beak(text: str, expected: set[str]) -> None:
-    assert beak(text) == expected
+    tags = beak(text)
+
+    assert set(map(str, tags)) == expected
 
 
 def test_all_tags_are_tested() -> None:
