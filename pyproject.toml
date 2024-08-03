@@ -10,7 +10,7 @@ repository = "https://github.com/juniorguru/beak"
 packages = [{ include = "jg" }]
 
 [tool.poetry.scripts]
-beak = "jg.beak.cli:main"
+beak = "jg.beak.core:main"
 
 [tool.poetry.dependencies]
 python = ">=3.11 <4.0"
