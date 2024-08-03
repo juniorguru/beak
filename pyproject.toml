@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "jg.beak"
+version = "0.0"
+description = "Analyzes text, returns tags"
+authors = ["Honza Javorek <honza@junior.guru>"]
+license = "AGPL-3.0-only"
+readme = "README.md"
+homepage = "https://junior.guru/"
+repository = "https://github.com/juniorguru/beak"
+packages = [{ include = "jg" }]
+
+[tool.poetry.scripts]
+beak = "jg.beak.cli:main"
+
+[tool.poetry.dependencies]
+python = ">=3.11 <4.0"
+click = "8.1.7"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "8.2.2"
+pytest-ruff = "0.3.2"
+ruff = "0.5.6"
+
+[tool.pytest.ini_options]
+python_files = "test_*.py"
+testpaths = "tests"
+addopts = "--import-mode=importlib --ff --ruff --ruff-format"
+
+[tool.ruff]
+target-version = "py311"
+extend-exclude = ["rule_template"]
+
+[tool.ruff.lint]
+extend-select = ["I"]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+lines-after-imports = 2
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
