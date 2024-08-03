@@ -1,13 +1,11 @@
-from enum import Enum, StrEnum
-from importlib import import_module
 import itertools
 from pathlib import Path
 from typing import cast
 
 import pytest
 
-from jg.beak.core import beak
 from jg.beak import tags as tags_module
+from jg.beak.core import beak
 
 
 fixtures = [
