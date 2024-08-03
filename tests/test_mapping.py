@@ -1,3 +1,5 @@
+from enum import Enum, StrEnum
+from importlib import import_module
 import itertools
 from pathlib import Path
 from typing import cast
@@ -27,7 +29,13 @@ def test_beak(text: str, expected: set[str]) -> None:
 
 
 def test_all_tags_are_tested() -> None:
-    all_tags = set(map(str, list(TechTag) + list(TechLibTag)))
+    tags_module = import_module("jg.beak.tags")
+    tag_classes = [
+        getattr(tags_module, member_name)
+        for member_name in dir(tags_module)
+        if member_name != "Tag" and member_name.endswith("Tag")
+    ]
+    all_tags = set(map(str, itertools.chain(*map(list, tag_classes))))
     tested_tags = set(
         itertools.chain.from_iterable(cast(set, param.values[1]) for param in fixtures)
     )
