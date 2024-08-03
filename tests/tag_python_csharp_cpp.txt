@@ -1,0 +1,1 @@
+jmenuju se Dominik a jsem celoživotní IT nadšenec. Nikdy jsem ale svoje záliby nepropojil s prací. Programovat jsem začal na Arduinu, pokračoval přes C# unity, C++ a v poslední době ML v Pythonu.
