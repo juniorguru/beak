@@ -1,4 +1,4 @@
-# beak …🐤
+# Beak …🐤
 Analyzes text, returns tags.
 
 ## Name
