@@ -7,7 +7,7 @@ from typing import cast
 import pytest
 
 from jg.beak.core import beak
-from jg.beak.tags import TechLibTag, TechTag
+from jg.beak import tags as tags_module
 
 
 fixtures = [
@@ -29,7 +29,6 @@ def test_beak(text: str, expected: set[str]) -> None:
 
 
 def test_all_tags_are_tested() -> None:
-    tags_module = import_module("jg.beak.tags")
     tag_classes = [
         getattr(tags_module, member_name)
         for member_name in dir(tags_module)
