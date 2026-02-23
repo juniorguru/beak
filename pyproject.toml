@@ -19,7 +19,7 @@ click = "8.3.1"
 [tool.poetry.group.dev.dependencies]
 pytest = "9.0.2"
 pytest-ruff = "0.5"
-ruff = "0.15.1"
+ruff = "0.15.2"
 
 [tool.pytest.ini_options]
 python_files = "test_*.py"
