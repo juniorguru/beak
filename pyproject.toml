@@ -17,9 +17,9 @@ python = ">=3.11 <4.0"
 click = "8.3.2"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "9.0.2"
+pytest = "9.0.3"
 pytest-ruff = "0.5"
-ruff = "0.15.9"
+ruff = "0.15.10"
 
 [tool.pytest.ini_options]
 python_files = "test_*.py"
