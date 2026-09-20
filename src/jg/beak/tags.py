@@ -44,4 +44,15 @@ class TechLibTag(StrEnum):
     vue = auto()
 
 
-Tag = TechTag | TechLibTag
+class AITag(StrEnum):
+    # General AI awareness / chat-level use (umbrella tag). Also emitted
+    # alongside the more specific AI tags below, so a job that mentions AI
+    # coding agents or building AI is always tagged ``ai`` too.
+    ai = auto()
+    # Uses AI coding agents (Claude Code, Cursor, Codex, Copilot, ...).
+    aiagents = auto()
+    # Builds AI/LLM features (LLM, RAG, embeddings, prompt engineering, ...).
+    aibuild = auto()
+
+
+Tag = TechTag | TechLibTag | AITag

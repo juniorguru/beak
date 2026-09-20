@@ -1,6 +1,6 @@
 import re
 
-from jg.beak.tags import TechLibTag, TechTag
+from jg.beak.tags import AITag, TechLibTag, TechTag
 
 
 MAPPING = {
@@ -65,4 +65,58 @@ MAPPING = {
     re.compile(r"\bRP[iI]\b"): [TechTag.hardware],
     re.compile(r"\brapsberr?ypi\b", re.I): [TechTag.hardware],
     re.compile(r"\barduin\w+", re.I): [TechTag.hardware],
+    # --- AI: general awareness / chat-level use -> [ai] ---
+    # NOTE: the bare "AI" / "A.I." / "ML"-style abbreviations are matched
+    # case-sensitively on purpose; a case-insensitive \bai\b would match
+    # unrelated lowercase substrings.
+    re.compile(r"\bAI\b"): [AITag.ai],
+    re.compile(r"\bA\.I\."): [AITag.ai],
+    re.compile(r"\bum[ěe]l[áa]\w*\s+inteligenc\w+", re.I): [AITag.ai],
+    re.compile(r"\bartificial intelligence\b", re.I): [AITag.ai],
+    re.compile(r"\bchat\s?gpt\b", re.I): [AITag.ai],
+    re.compile(r"\bgemini\b", re.I): [AITag.ai],
+    re.compile(r"\bclaude\b", re.I): [AITag.ai],
+    re.compile(r"\bAI[-\s]?n[áa]stroj\w+", re.I): [AITag.ai],
+    re.compile(r"\bAI tools?\b", re.I): [AITag.ai],
+    re.compile(
+        r"\bAI[-\s](first|native|driven|powered|assisted|ready)\b", re.I
+    ): [AITag.ai],
+    # --- AI: uses AI coding agents -> [ai, aiagents] ---
+    re.compile(r"\bclaude code\b", re.I): [AITag.ai, AITag.aiagents],
+    re.compile(r"\bcursor\b", re.I): [AITag.ai, AITag.aiagents],
+    re.compile(r"\bcodex\b", re.I): [AITag.ai, AITag.aiagents],
+    re.compile(r"\bcopilot\b", re.I): [AITag.ai, AITag.aiagents],
+    re.compile(
+        r"\b(windsurf|opencode|aider|tabnine|codeium|supermaven)\b", re.I
+    ): [AITag.ai, AITag.aiagents],
+    re.compile(r"\bjetbrains ai\b", re.I): [AITag.ai, AITag.aiagents],
+    re.compile(r"\b(ai\s+)?coding agent\w*\b", re.I): [AITag.ai, AITag.aiagents],
+    re.compile(r"\bvibe[-\s]?coding\b", re.I): [AITag.ai, AITag.aiagents],
+    re.compile(r"\bagentic (development|dev|coding|pm)\b", re.I): [
+        AITag.ai,
+        AITag.aiagents,
+    ],
+    re.compile(r"\bpracovat agentn\w+", re.I): [AITag.ai, AITag.aiagents],
+    # --- AI: builds AI/LLM features -> [ai, aibuild] ---
+    re.compile(r"\bLLMs?\b"): [AITag.ai, AITag.aibuild],
+    re.compile(r"\blarge language model\w*", re.I): [AITag.ai, AITag.aibuild],
+    re.compile(r"\bRAG\b"): [AITag.ai, AITag.aibuild],
+    re.compile(r"\bretrieval[-\s]augmented\b", re.I): [AITag.ai, AITag.aibuild],
+    re.compile(r"\bembedding\w*", re.I): [AITag.ai, AITag.aibuild],
+    re.compile(r"\bfine[-\s]?tun\w+", re.I): [AITag.ai, AITag.aibuild],
+    re.compile(r"\bprompt engineer\w*", re.I): [AITag.ai, AITag.aibuild],
+    re.compile(r"\b(langchain|llama[-\s]?index|semantic kernel)\b", re.I): [
+        AITag.ai,
+        AITag.aibuild,
+    ],
+    re.compile(r"\bvector\s?(database|db)\b", re.I): [AITag.ai, AITag.aibuild],
+    re.compile(r"\bvektorov\w+\s+datab\w+", re.I): [AITag.ai, AITag.aibuild],
+    re.compile(r"\b(pinecone|qdrant|weaviate)\b", re.I): [AITag.ai, AITag.aibuild],
+    re.compile(r"\bmulti[-\s]?agent\w*\b", re.I): [AITag.ai, AITag.aibuild],
+    re.compile(r"\bNLP\b"): [AITag.ai, AITag.aibuild],
+    re.compile(r"\bcomputer vision\b", re.I): [AITag.ai, AITag.aibuild],
+    re.compile(r"\bpo[čc][íi]ta[čc]ov\w+\s+vid[ěe]n\w+", re.I): [
+        AITag.ai,
+        AITag.aibuild,
+    ],
 }

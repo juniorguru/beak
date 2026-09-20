@@ -1,0 +1,3 @@
+Denně pracujeme s AI coding agenty jako Claude Code, Cursor nebo Codex.
+Vibecoding je pro nás úplně běžný způsob práce a čekáme, že s agenty umíš
+zacházet a správně jim formulovat zadání.
