@@ -17,7 +17,7 @@ def main(text_file: TextIO) -> None:
 def beak(text: str, mapping: dict[Pattern, list[Tag]] | None = None) -> set[Tag]:
     mapping = mapping or MAPPING
     tags = set()
-    for pattern_re, pattern_tags in MAPPING.items():
+    for pattern_re, pattern_tags in mapping.items():
         if pattern_re.search(text):
             tags.update(pattern_tags)
     return tags
