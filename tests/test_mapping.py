@@ -1,4 +1,5 @@
 import itertools
+import re
 from pathlib import Path
 from typing import cast
 
@@ -6,6 +7,7 @@ import pytest
 
 from jg.beak import tags as tags_module
 from jg.beak.core import beak
+from jg.beak.tags import TechTag
 
 
 fixtures = [
@@ -39,3 +41,10 @@ def test_all_tags_are_tested() -> None:
         itertools.chain.from_iterable(cast(set, param.values[1]) for param in fixtures)
     )
     assert tested_tags == all_tags
+
+
+def test_custom_mapping_is_used() -> None:
+    mapping = {re.compile(r"\bfoobar\b"): [TechTag.python]}
+
+    assert beak("some foobar text", mapping=mapping) == {TechTag.python}
+    assert beak("plain python text", mapping=mapping) == set()
