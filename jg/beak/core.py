@@ -10,7 +10,7 @@ from jg.beak.tags import Tag
 @click.command()
 @click.argument("text_file", type=click.File("r"), default=sys.stdin)
 def main(text_file: TextIO) -> None:
-    for tag in beak(text_file.read()):
+    for tag in sorted(beak(text_file.read())):
         click.echo(tag.value)
 
 
