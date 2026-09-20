@@ -1,25 +1,28 @@
-[tool.poetry]
+[project]
 name = "jg.beak"
 version = "0.0"
 description = "Analyzes text, returns tags"
-authors = ["Honza Javorek <honza@junior.guru>"]
-license = "AGPL-3.0-only"
 readme = "README.md"
-homepage = "https://junior.guru/"
-repository = "https://github.com/juniorguru/beak"
-packages = [{ include = "jg" }]
+authors = [{ name = "Honza Javorek", email = "honza@junior.guru" }]
+license = { text = "AGPL-3.0-only" }
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "click>=8.5.0",
+]
 
-[tool.poetry.scripts]
+[project.urls]
+homepage = "https://junior.guru/"
+repository = "https://github.com/juniorguru/beak/"
+
+[project.scripts]
 beak = "jg.beak.core:main"
 
-[tool.poetry.dependencies]
-python = ">=3.13,<3.14"
-click = "8.5.0"
-
-[tool.poetry.group.dev.dependencies]
-pytest = "9.1.1"
-pytest-ruff = "0.5"
-ruff = "0.16.7"
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-ruff>=0.5",
+    "ruff>=0.16.7",
+]
 
 [tool.pytest.ini_options]
 python_files = "test_*.py"
@@ -37,5 +40,8 @@ combine-as-imports = true
 lines-after-imports = 2
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["uv_build>=0.8.11,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "jg.beak"
