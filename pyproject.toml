@@ -13,7 +13,7 @@ packages = [{ include = "jg" }]
 beak = "jg.beak.core:main"
 
 [tool.poetry.dependencies]
-python = ">=3.11 <4.0"
+python = ">=3.13,<3.14"
 click = "8.5.0"
 
 [tool.poetry.group.dev.dependencies]
@@ -27,7 +27,7 @@ testpaths = "tests"
 addopts = "--import-mode=importlib --ff --ruff --ruff-format"
 
 [tool.ruff]
-target-version = "py311"
+target-version = "py313"
 extend-exclude = ["rule_template"]
 
 [tool.ruff.lint]
