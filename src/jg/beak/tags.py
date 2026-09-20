@@ -45,15 +45,9 @@ class TechLibTag(StrEnum):
 
 
 class AITag(StrEnum):
-    # General AI awareness / chat-level use (umbrella tag). Also emitted
-    # alongside the more specific AI tags below, so a job that mentions AI
-    # coding agents or building AI is always tagged ``ai`` too.
     ai = auto()
-    # Uses AI coding agents (Claude Code, Cursor, Codex, Copilot, ...).
     aiagents = auto()
-    # Builds AI/LLM features (LLM, RAG, embeddings, prompt engineering, ...).
     aibuild = auto()
-    # Vibecoding as an attitude / way of working (also implies aiagents).
     vibecoding = auto()
 
 

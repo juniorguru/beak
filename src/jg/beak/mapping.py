@@ -65,10 +65,6 @@ MAPPING = {
     re.compile(r"\bRP[iI]\b"): [TechTag.hardware],
     re.compile(r"\brapsberr?ypi\b", re.I): [TechTag.hardware],
     re.compile(r"\barduin\w+", re.I): [TechTag.hardware],
-    # --- AI: general awareness / chat-level use -> [ai] ---
-    # NOTE: the bare "AI" / "A.I." / "ML"-style abbreviations are matched
-    # case-sensitively on purpose; a case-insensitive \bai\b would match
-    # unrelated lowercase substrings.
     re.compile(r"\bAI\b"): [AITag.ai],
     re.compile(r"\bA\.I\."): [AITag.ai],
     re.compile(r"\bum[ěe]l[áa]\w*\s+inteligenc\w+", re.I): [AITag.ai],
@@ -81,7 +77,6 @@ MAPPING = {
     re.compile(
         r"\bAI[-\s](first|native|driven|powered|assisted|ready)\b", re.I
     ): [AITag.ai],
-    # --- AI: uses AI coding agents -> [ai, aiagents] ---
     re.compile(r"\bclaude code\b", re.I): [AITag.ai, AITag.aiagents],
     re.compile(r"\bcursor\b", re.I): [AITag.ai, AITag.aiagents],
     re.compile(r"\bcodex\b", re.I): [AITag.ai, AITag.aiagents],
@@ -95,10 +90,6 @@ MAPPING = {
         AITag.ai,
         AITag.aiagents,
     ],
-    # Vibecoding as an attitude / way of working. Covers English and Czech
-    # phonetic spellings (vibe/vajb + coding/kóding/...), the Czech verb
-    # (navajbit, vajbovat, ...) with its declension, and "vibe/agentic
-    # engineering". Implies aiagents (and therefore ai).
     re.compile(
         r"\b(?:(?:na)?vajb\w*"
         r"|(?:vibe|vajb)[\s-]?(?:cod|kod|cód|kód)\w+"
@@ -107,7 +98,6 @@ MAPPING = {
         re.I,
     ): [AITag.ai, AITag.aiagents, AITag.vibecoding],
     re.compile(r"\bpracovat agentn\w+", re.I): [AITag.ai, AITag.aiagents],
-    # --- AI: builds AI/LLM features -> [ai, aibuild] ---
     re.compile(r"\bLLMs?\b"): [AITag.ai, AITag.aibuild],
     re.compile(r"\blarge language model\w*", re.I): [AITag.ai, AITag.aibuild],
     re.compile(r"\bRAG\b"): [AITag.ai, AITag.aibuild],
