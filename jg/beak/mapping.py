@@ -20,7 +20,6 @@ MAPPING = {
     re.compile(r"\bpandas\b", re.I): [TechTag.python, TechLibTag.pandas],
     re.compile(r"\bexcel\w*\b", re.I): [TechTag.excel],
     re.compile(r"\bpower ?bi\b", re.I): [TechTag.powerbi],
-    re.compile(r"\bdatab(aá)ze\b"): [TechTag.database],
     re.compile(r"\bjavascript\w*\b", re.I): [TechTag.javascript],
     re.compile(r"\bJS\b"): [TechTag.javascript],
     re.compile(r"\btypescript\w*\b", re.I): [TechTag.javascript, TechTag.typescript],
