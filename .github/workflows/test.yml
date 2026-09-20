@@ -1,7 +1,7 @@
 name: test
-
-on: [push]
-
+on:
+  push:
+  pull_request:
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -9,17 +9,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
-      - name: Install Poetry
-        run: pipx install poetry
-
-      - name: Setup Python
-        uses: actions/setup-python@v7
-        with:
-          python-version-file: pyproject.toml
-          cache: poetry
+      - uses: astral-sh/setup-uv@v7
 
       - name: Install Python dependencies
-        run: poetry install
+        run: uv sync
 
       - name: Test
-        run: poetry run pytest
+        run: uv run pytest
