@@ -91,11 +91,21 @@ MAPPING = {
     ): [AITag.ai, AITag.aiagents],
     re.compile(r"\bjetbrains ai\b", re.I): [AITag.ai, AITag.aiagents],
     re.compile(r"\b(ai\s+)?coding agent\w*\b", re.I): [AITag.ai, AITag.aiagents],
-    re.compile(r"\bvibe[-\s]?coding\b", re.I): [AITag.ai, AITag.aiagents],
     re.compile(r"\bagentic (development|dev|coding|pm)\b", re.I): [
         AITag.ai,
         AITag.aiagents,
     ],
+    # Vibecoding as an attitude / way of working. Covers English and Czech
+    # phonetic spellings (vibe/vajb + coding/kóding/...), the Czech verb
+    # (navajbit, vajbovat, ...) with its declension, and "vibe/agentic
+    # engineering". Implies aiagents (and therefore ai).
+    re.compile(
+        r"\b(?:(?:na)?vajb\w*"
+        r"|(?:vibe|vajb)[\s-]?(?:cod|kod|cód|kód)\w+"
+        r"|(?:vibe|vajb)[\s-]?engineering\w*"
+        r"|agentic[\s-]?engineering\w*)\b",
+        re.I,
+    ): [AITag.ai, AITag.aiagents, AITag.vibecoding],
     re.compile(r"\bpracovat agentn\w+", re.I): [AITag.ai, AITag.aiagents],
     # --- AI: builds AI/LLM features -> [ai, aibuild] ---
     re.compile(r"\bLLMs?\b"): [AITag.ai, AITag.aibuild],

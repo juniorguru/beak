@@ -53,6 +53,8 @@ class AITag(StrEnum):
     aiagents = auto()
     # Builds AI/LLM features (LLM, RAG, embeddings, prompt engineering, ...).
     aibuild = auto()
+    # Vibecoding as an attitude / way of working (also implies aiagents).
+    vibecoding = auto()
 
 
 Tag = TechTag | TechLibTag | AITag
