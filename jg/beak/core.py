@@ -1,5 +1,6 @@
+import re
 import sys
-from typing import Pattern, TextIO
+from typing import TextIO
 
 import click
 
@@ -14,7 +15,9 @@ def main(text_file: TextIO) -> None:
         click.echo(tag.value)
 
 
-def beak(text: str, mapping: dict[Pattern, list[Tag]] | None = None) -> set[Tag]:
+def beak(
+    text: str, mapping: dict[re.Pattern[str], list[Tag]] | None = None
+) -> set[Tag]:
     mapping = mapping or MAPPING
     tags = set()
     for pattern_re, pattern_tags in mapping.items():
