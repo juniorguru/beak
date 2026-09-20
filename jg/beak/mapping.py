@@ -50,7 +50,7 @@ MAPPING = {
     re.compile(r"\bruby\b", re.I): [TechTag.ruby],
     re.compile(r"\bRoR\b"): [TechTag.ruby],
     re.compile(r"\bruby\s*on\s*rails\b", re.I): [TechTag.ruby],
-    re.compile(r"\bjazyk[au]\s+c\b", re.I): [TechTag.c],
+    re.compile(r"\bjazyk[au]\s+c\b(?![#+])", re.I): [TechTag.c],
     re.compile(r"\bcéčk\w\b", re.I): [TechTag.c],
     re.compile(r"\bc(/|\s+a\s+)c[\+p]{2}\b", re.I): [TechTag.c, TechTag.cpp],
     re.compile(r"\bhardwar\w+", re.I): [TechTag.hardware],
