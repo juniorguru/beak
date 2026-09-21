@@ -45,9 +45,9 @@ class TechLibTag(StrEnum):
 
 
 class AITag(StrEnum):
-    ai = auto()
-    aiagents = auto()
-    aibuild = auto()
+    chat = auto()
+    agents = auto()
+    build = auto()
     vibecoding = auto()
 
 

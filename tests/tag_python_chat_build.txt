@@ -1,0 +1,3 @@
+Hledáme Python vývojáře se zájmem o machine learning. Budeš trénovat
+neuronové sítě v TensorFlow a PyTorch a nasazovat modely do produkce.
+Zkušenost se strojovým učením a MLOps je výhodou.
