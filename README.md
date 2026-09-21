@@ -33,5 +33,29 @@ abbreviations are matched case-sensitively (a case-insensitive `ai` would match
 unrelated lowercase substrings), and the tag boundaries come from a scrape and
 analysis of ~300 tech job postings on jobs.cz and startupjobs.cz.
 
+## Adding or editing rules
+The matching rules live in [`src/jg/beak/mapping.toml`](src/jg/beak/mapping.toml)
+as a list of `[[rule]]` entries — no Python needed. Each rule is a regex plus
+the tags it produces:
+
+```toml
+[[rule]]
+pattern = 'claude code'
+tags = ["chat", "agents"]
+```
+
+Conventions applied when the file is loaded:
+
+- Matching is **case-insensitive** by default; set `case_sensitive = true` to
+  turn it off (e.g. for `AI`, `ML` — a case-insensitive `ai` would match
+  unrelated substrings).
+- A plain space between words expands to `\s+`, so `claude code` also matches
+  `claude  code` and `claude\ncode`. Use explicit `\s*` / `\s?` / `\x20` when
+  you need something other than "one or more whitespace".
+- The pattern is wrapped in `\b…\b` (whole-word match) automatically; set
+  `treat_as_word = false` to match anywhere.
+- Every tag is validated against the enums in `tags.py` on load, so a typo
+  fails fast.
+
 ## License
 [AGPL-3.0-only](LICENSE), copyright (c) 2024–2026 Jan Javorek, and contributors.
