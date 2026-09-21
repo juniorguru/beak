@@ -113,6 +113,7 @@ MAPPING = {
     re.compile(r"\bvektorov\w+\s+datab\w+", re.I): [TechTag.database],
     re.compile(r"\b(pinecone|qdrant|weaviate)\b", re.I): [
         TechTag.database,
+        AITag.chat,
         AITag.build,
     ],
     re.compile(r"\bmulti[-\s]?agent\w*\b", re.I): [AITag.chat, AITag.build],
