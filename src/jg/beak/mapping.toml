@@ -1,0 +1,463 @@
+[[rule]]
+pattern = 'python\w*'
+tags = ["python"]
+
+[[rule]]
+pattern = 'sql'
+tags = ["database"]
+
+[[rule]]
+pattern = 'datab[aá][sz]e'
+tags = ["database"]
+
+[[rule]]
+pattern = 'php'
+tags = ["php"]
+
+[[rule]]
+pattern = '(nette|laravel|symfony)\w*'
+tags = ["php"]
+
+[[rule]]
+pattern = 'mysql'
+tags = ["database", "mysql"]
+
+[[rule]]
+pattern = 'postgre\w+'
+tags = ["database", "postgresql"]
+
+[[rule]]
+pattern = 'kubernet\w*'
+tags = ["docker", "kubernetes"]
+
+[[rule]]
+pattern = 'docker\w*'
+tags = ["docker"]
+
+[[rule]]
+pattern = 'linux\w*'
+tags = ["linux"]
+
+[[rule]]
+pattern = 'swift\w*'
+tags = ["swift"]
+
+[[rule]]
+pattern = 'djang\w+'
+tags = ["django"]
+
+[[rule]]
+pattern = 'flask\w*'
+tags = ["python", "flask"]
+
+[[rule]]
+pattern = 'pandas'
+tags = ["python", "pandas"]
+
+[[rule]]
+pattern = 'excel\w*'
+tags = ["excel"]
+
+[[rule]]
+pattern = 'power\x20?bi'
+tags = ["powerbi"]
+
+[[rule]]
+pattern = 'javascript\w*'
+tags = ["javascript"]
+
+[[rule]]
+pattern = 'JS'
+tags = ["javascript"]
+case_sensitive = true
+
+[[rule]]
+pattern = 'typescript\w*'
+tags = ["javascript", "typescript"]
+
+[[rule]]
+pattern = 'TS'
+tags = ["javascript", "typescript"]
+case_sensitive = true
+
+[[rule]]
+pattern = 'HTML'
+tags = ["html"]
+case_sensitive = true
+
+[[rule]]
+pattern = 'CSS'
+tags = ["css"]
+case_sensitive = true
+
+[[rule]]
+pattern = 'front\-?end\w*'
+tags = ["html", "css", "javascript"]
+
+[[rule]]
+pattern = 'bootstrap\w*'
+tags = ["css", "bootstrap"]
+
+[[rule]]
+pattern = 'tailwind\w*'
+tags = ["css", "tailwind"]
+
+[[rule]]
+pattern = '\bC\#\W'
+tags = ["csharp"]
+case_sensitive = true
+treat_as_word = false
+
+[[rule]]
+pattern = '\.NET\b'
+tags = ["csharp"]
+treat_as_word = false
+
+[[rule]]
+pattern = 'dotne[tť]\w*'
+tags = ["csharp"]
+
+[[rule]]
+pattern = '(java|javy|javě|javu|javou)'
+tags = ["java"]
+
+[[rule]]
+pattern = 'kotlin\w*'
+tags = ["kotlin"]
+
+[[rule]]
+pattern = '\bC\+\+\W'
+tags = ["cpp"]
+case_sensitive = true
+treat_as_word = false
+
+[[rule]]
+pattern = 'react\w*'
+tags = ["javascript", "react"]
+
+[[rule]]
+pattern = 'vue(\.js)?'
+tags = ["javascript", "vue"]
+
+[[rule]]
+pattern = 'angular\w*'
+tags = ["javascript", "angular"]
+
+[[rule]]
+pattern = '\.?js\b'
+tags = ["javascript"]
+treat_as_word = false
+
+[[rule]]
+pattern = 'jquery'
+tags = ["javascript"]
+
+[[rule]]
+pattern = 'API'
+tags = ["api"]
+case_sensitive = true
+
+[[rule]]
+pattern = 'FastAPI'
+tags = ["api", "python"]
+
+[[rule]]
+pattern = 'ruby'
+tags = ["ruby"]
+
+[[rule]]
+pattern = 'RoR'
+tags = ["ruby"]
+case_sensitive = true
+
+[[rule]]
+pattern = 'ruby\s*on\s*rails'
+tags = ["ruby"]
+
+[[rule]]
+pattern = '\bjazyk[au]\s+c\b(?![#+])'
+tags = ["c"]
+treat_as_word = false
+
+[[rule]]
+pattern = 'céčk\w'
+tags = ["c"]
+
+[[rule]]
+pattern = 'c(/| a )c[\+p]{2}'
+tags = ["c", "cpp"]
+
+[[rule]]
+pattern = '\bhardwar\w+'
+tags = ["hardware"]
+treat_as_word = false
+
+[[rule]]
+pattern = 'testing'
+tags = ["testing"]
+
+[[rule]]
+pattern = '\btestov\w+'
+tags = ["testing"]
+treat_as_word = false
+
+[[rule]]
+pattern = 'git'
+tags = ["git"]
+
+[[rule]]
+pattern = 'svelte(kit)?'
+tags = ["svelte"]
+
+[[rule]]
+pattern = '\bdatov\w+\s+anal[yý][sz]\w+'
+tags = ["dataanalysis"]
+treat_as_word = false
+
+[[rule]]
+pattern = 'node\.js'
+tags = ["javascript", "node"]
+
+[[rule]]
+pattern = 'Rust'
+tags = ["rust"]
+case_sensitive = true
+
+[[rule]]
+pattern = 'SpringBoot'
+tags = ["java"]
+
+[[rule]]
+pattern = 'Spring\s*Framework'
+tags = ["java"]
+
+[[rule]]
+pattern = 'RP[iI]'
+tags = ["hardware"]
+case_sensitive = true
+
+[[rule]]
+pattern = 'rapsberr?ypi'
+tags = ["hardware"]
+
+[[rule]]
+pattern = '\barduin\w+'
+tags = ["hardware"]
+treat_as_word = false
+
+[[rule]]
+pattern = 'AI'
+tags = ["chat"]
+case_sensitive = true
+
+[[rule]]
+pattern = '\bA\.I\.'
+tags = ["chat"]
+case_sensitive = true
+treat_as_word = false
+
+[[rule]]
+pattern = '\bum[ěe]l\w*\s+inteligenc\w+'
+tags = ["chat"]
+treat_as_word = false
+
+[[rule]]
+pattern = 'artificial intelligence'
+tags = ["chat"]
+
+[[rule]]
+pattern = 'chat\s?gpt'
+tags = ["chat"]
+
+[[rule]]
+pattern = 'gemini'
+tags = ["chat"]
+
+[[rule]]
+pattern = 'claude'
+tags = ["chat"]
+
+[[rule]]
+pattern = 'AI[-\s]?n[áa]stroj\w*'
+tags = ["chat"]
+
+[[rule]]
+pattern = 'AI tools?'
+tags = ["chat"]
+
+[[rule]]
+pattern = 'AI[-\s](first|native|driven|powered|assisted|ready)'
+tags = ["chat"]
+
+[[rule]]
+pattern = 'claude code'
+tags = ["chat", "agents"]
+
+[[rule]]
+pattern = 'cursor'
+tags = ["chat", "agents"]
+
+[[rule]]
+pattern = 'codex'
+tags = ["chat", "agents"]
+
+[[rule]]
+pattern = 'copilot'
+tags = ["chat", "agents"]
+
+[[rule]]
+pattern = '(windsurf|opencode|aider|tabnine|codeium|supermaven)'
+tags = ["chat", "agents"]
+
+[[rule]]
+pattern = 'jetbrains ai'
+tags = ["chat", "agents"]
+
+[[rule]]
+pattern = '(ai )?cod\w+ agent\w*'
+tags = ["chat", "agents"]
+
+[[rule]]
+pattern = 'agentic (develop\w+|dev|coding)'
+tags = ["chat", "agents"]
+
+[[rule]]
+pattern = '(?:(?:na)?vajb\w*|(?:vibe|vajb)[\s-]?(?:cod|kod|cód|kód)\w+|(?:vibe|vajb)[\s-]?engineering\w*|agentic[\s-]?engineering\w*)'
+tags = ["chat", "agents", "vibecoding"]
+
+[[rule]]
+pattern = '\bpracovat\s+agentn\w+'
+tags = ["chat", "agents"]
+treat_as_word = false
+
+[[rule]]
+pattern = 'LLMs?'
+tags = ["chat", "build"]
+case_sensitive = true
+
+[[rule]]
+pattern = '\blarge\s+language\s+model\w*'
+tags = ["chat", "build"]
+treat_as_word = false
+
+[[rule]]
+pattern = 'RAG'
+tags = ["chat", "build"]
+case_sensitive = true
+
+[[rule]]
+pattern = 'retrieval[-\s]augmented'
+tags = ["chat", "build"]
+
+[[rule]]
+pattern = '\bembedding\w*'
+tags = ["chat", "build"]
+treat_as_word = false
+
+[[rule]]
+pattern = '\bfine[-\s]?tun\w+'
+tags = ["chat", "build"]
+treat_as_word = false
+
+[[rule]]
+pattern = '\bprompt\s+engineer\w*'
+tags = ["chat", "build"]
+treat_as_word = false
+
+[[rule]]
+pattern = '(langchain|llama[-\s]?index|semantic kernel)'
+tags = ["chat", "build"]
+
+[[rule]]
+pattern = 'vector\s?(database|db)'
+tags = ["database"]
+
+[[rule]]
+pattern = '\bvektorov\w+\s+datab\w+'
+tags = ["database"]
+treat_as_word = false
+
+[[rule]]
+pattern = '(pinecone|qdrant|weaviate)'
+tags = ["database", "chat", "build"]
+
+[[rule]]
+pattern = 'multi[-\s]?agent\w*'
+tags = ["chat", "build"]
+
+[[rule]]
+pattern = '\bagentic\s+(architect\w*|system\w*)'
+tags = ["chat", "build"]
+treat_as_word = false
+
+[[rule]]
+pattern = 'NLP'
+tags = ["chat", "build"]
+case_sensitive = true
+
+[[rule]]
+pattern = 'computer vision'
+tags = ["chat", "build"]
+
+[[rule]]
+pattern = '\bpo[čc][íi]ta[čc]ov\w+\s+vid[ěe]n\w+'
+tags = ["chat", "build"]
+treat_as_word = false
+
+[[rule]]
+pattern = 'machine learning'
+tags = ["chat", "build"]
+
+[[rule]]
+pattern = '\bstrojov\w+\s+u[čc]en\w+'
+tags = ["chat", "build"]
+treat_as_word = false
+
+[[rule]]
+pattern = 'ML'
+tags = ["chat", "build"]
+case_sensitive = true
+
+[[rule]]
+pattern = 'deep learning'
+tags = ["chat", "build"]
+
+[[rule]]
+pattern = '\bhlubok\w+\s+u[čc]en\w+'
+tags = ["chat", "build"]
+treat_as_word = false
+
+[[rule]]
+pattern = '\bneural\s+net\w*'
+tags = ["chat", "build"]
+treat_as_word = false
+
+[[rule]]
+pattern = '\bneuronov\w+\s+s[íi]t\w+'
+tags = ["chat", "build"]
+treat_as_word = false
+
+[[rule]]
+pattern = 'MLOps'
+tags = ["chat", "build"]
+
+[[rule]]
+pattern = 'tensorflow'
+tags = ["chat", "build"]
+
+[[rule]]
+pattern = 'pytorch'
+tags = ["chat", "build"]
+
+[[rule]]
+pattern = 'scikit[-\s]?learn\b|\bsklearn'
+tags = ["chat", "build"]
+
+[[rule]]
+pattern = 'keras'
+tags = ["chat", "build"]
+
+[[rule]]
+pattern = 'opencv'
+tags = ["chat", "build"]
+

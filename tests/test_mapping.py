@@ -7,7 +7,8 @@ import pytest
 
 from jg.beak import tags as tags_module
 from jg.beak.core import beak
-from jg.beak.tags import TechTag
+from jg.beak.mapping import MAPPING
+from jg.beak.tags import Tag, TechTag
 
 
 fixtures = [
@@ -41,6 +42,14 @@ def test_all_tags_are_tested() -> None:
         itertools.chain.from_iterable(cast(set, param.values[1]) for param in fixtures)
     )
     assert tested_tags == all_tags
+
+
+def test_mapping_loads_from_toml() -> None:
+    assert MAPPING, "MAPPING is empty"
+    for pattern, mapped_tags in MAPPING.items():
+        assert isinstance(pattern, re.Pattern)
+        assert mapped_tags, f"{pattern.pattern!r} has no tags"
+        assert all(isinstance(tag, Tag) for tag in mapped_tags)
 
 
 def test_custom_mapping_is_used() -> None:

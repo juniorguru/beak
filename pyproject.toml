@@ -8,6 +8,7 @@ license = { text = "AGPL-3.0-only" }
 requires-python = ">=3.13,<3.14"
 dependencies = [
     "click>=8.5.0",
+    "pydantic>=2",
 ]
 
 [project.urls]
