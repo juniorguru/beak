@@ -8,7 +8,7 @@ import pytest
 
 from jg.beak import main, tags as tags_module
 from jg.beak.main import _load_mapping, _toml_rules, beak
-from jg.beak.tags import AITag, Tag, TechLibTag, TechTag
+from jg.beak.tags import Tag, TechLibTag, TechTag
 
 
 fixtures = [
@@ -68,7 +68,7 @@ def test_mapping_toml_is_sorted_by_pattern() -> None:
 
 
 def test_tag_values_are_unambiguous() -> None:
-    values = [str(tag) for enum in (TechTag, TechLibTag, AITag) for tag in enum]
+    values = [str(tag) for enum in (TechTag, TechLibTag) for tag in enum]
 
     assert len(values) == len(set(values))
 

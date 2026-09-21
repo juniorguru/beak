@@ -8,11 +8,11 @@ from typing import TextIO
 import click
 from pydantic import BaseModel, TypeAdapter, field_validator
 
-from jg.beak.tags import AITag, Tag, TechLibTag, TechTag
+from jg.beak.tags import Tag, TechLibTag, TechTag
 
 
 _TAGS_BY_VALUE: dict[str, Tag] = {
-    str(tag): tag for enum in (TechTag, TechLibTag, AITag) for tag in enum
+    str(tag): tag for enum in (TechTag, TechLibTag) for tag in enum
 }
 
 
