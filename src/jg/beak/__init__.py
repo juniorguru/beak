@@ -1,4 +1,4 @@
-from jg.beak.core import beak
+from jg.beak.main import beak
 from jg.beak.tags import AITag, Tag, TechLibTag, TechTag
 
 

@@ -1,7 +1,11 @@
 import re
+import sys
 import tomllib
+from functools import cache
 from importlib.resources import files
+from typing import TextIO
 
+import click
 from pydantic import BaseModel, TypeAdapter, field_validator
 
 from jg.beak.tags import AITag, Tag, TechLibTag, TechTag
@@ -39,10 +43,30 @@ class Rule(BaseModel):
         return re.compile(pattern, flags), [_TAGS_BY_VALUE[tag] for tag in self.tags]
 
 
-def _load_mapping() -> dict[re.Pattern[str], list[Tag]]:
+def _toml_rules() -> list[Rule]:
     toml = files("jg.beak").joinpath("mapping.toml").read_text("utf-8")
-    rules = TypeAdapter(list[Rule]).validate_python(tomllib.loads(toml)["rule"])
-    return dict(rule.compile() for rule in rules)
+    return TypeAdapter(list[Rule]).validate_python(tomllib.loads(toml)["rule"])
 
 
-MAPPING = _load_mapping()
+@cache
+def _load_mapping() -> dict[re.Pattern[str], list[Tag]]:
+    return dict(rule.compile() for rule in _toml_rules())
+
+
+@click.command()
+@click.argument("text_file", type=click.File("r"), default=sys.stdin)
+def main(text_file: TextIO) -> None:
+    for tag in sorted(beak(text_file.read())):
+        click.echo(tag.value)
+
+
+def beak(
+    text: str, mapping: dict[re.Pattern[str], list[Tag]] | None = None
+) -> set[Tag]:
+    if mapping is None:
+        mapping = _load_mapping()
+    tags = set()
+    for pattern_re, pattern_tags in mapping.items():
+        if pattern_re.search(text):
+            tags.update(pattern_tags)
+    return tags

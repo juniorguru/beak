@@ -16,7 +16,7 @@ homepage = "https://junior.guru/"
 repository = "https://github.com/juniorguru/beak/"
 
 [project.scripts]
-beak = "jg.beak.core:main"
+beak = "jg.beak.main:main"
 
 [dependency-groups]
 dev = [
