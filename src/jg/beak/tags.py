@@ -2,6 +2,9 @@ from enum import StrEnum, auto
 
 
 class TechTag(StrEnum):
+    ai = auto()
+    agenticengineering = auto()
+    buildingai = auto()
     api = auto()
     c = auto()
     cpp = auto()
@@ -26,6 +29,7 @@ class TechTag(StrEnum):
     typescript = auto()
     dataanalysis = auto()
     rust = auto()
+    vibecoding = auto()
 
 
 class TechLibTag(StrEnum):
@@ -44,11 +48,4 @@ class TechLibTag(StrEnum):
     vue = auto()
 
 
-class AITag(StrEnum):
-    chat = auto()
-    agents = auto()
-    build = auto()
-    vibecoding = auto()
-
-
-Tag = TechTag | TechLibTag | AITag
+Tag = TechTag | TechLibTag

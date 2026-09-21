@@ -1,5 +1,5 @@
 from jg.beak.main import beak
-from jg.beak.tags import AITag, Tag, TechLibTag, TechTag
+from jg.beak.tags import Tag, TechLibTag, TechTag
 
 
-__all__ = ["AITag", "Tag", "TechLibTag", "TechTag", "beak"]
+__all__ = ["Tag", "TechLibTag", "TechTag", "beak"]

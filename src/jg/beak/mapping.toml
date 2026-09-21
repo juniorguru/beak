@@ -1,10 +1,10 @@
 [[rule]]
 pattern = '(?:(?:na)?vajb\w*|(?:vibe|vajb)[\s-]?(?:cod|kod|cód|kód)\w+|(?:vibe|vajb)[\s-]?engineering\w*|agentic[\s-]?engineering\w*)'
-tags = ["chat", "agents", "vibecoding"]
+tags = ["ai", "agenticengineering", "vibecoding"]
 
 [[rule]]
 pattern = '(ai )?cod\w+ agent\w*'
-tags = ["chat", "agents"]
+tags = ["ai", "agenticengineering"]
 
 [[rule]]
 pattern = '(java|javy|javě|javu|javou)'
@@ -12,7 +12,7 @@ tags = ["java"]
 
 [[rule]]
 pattern = '(langchain|llama[-\s]?index|semantic kernel)'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 
 [[rule]]
 pattern = '(nette|laravel|symfony)\w*'
@@ -20,11 +20,11 @@ tags = ["php"]
 
 [[rule]]
 pattern = '(pinecone|qdrant|weaviate)'
-tags = ["database", "chat", "build"]
+tags = ["database", "ai", "buildingai"]
 
 [[rule]]
 pattern = '(windsurf|opencode|aider|tabnine|codeium|supermaven)'
-tags = ["chat", "agents"]
+tags = ["ai", "agenticengineering"]
 
 [[rule]]
 pattern = '\.?js\b'
@@ -38,7 +38,7 @@ treat_as_word = false
 
 [[rule]]
 pattern = '\bA\.I\.'
-tags = ["chat"]
+tags = ["ai"]
 case_sensitive = true
 treat_as_word = false
 
@@ -61,28 +61,28 @@ treat_as_word = false
 
 [[rule]]
 pattern = 'agentic (develop\w+|dev|coding)'
-tags = ["chat", "agents"]
+tags = ["ai", "agenticengineering"]
 
 [[rule]]
 pattern = 'agentic\s+(architect\w*|system\w*)'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 
 [[rule]]
 pattern = 'AI'
-tags = ["chat"]
+tags = ["ai"]
 case_sensitive = true
 
 [[rule]]
 pattern = 'AI tools?'
-tags = ["chat"]
+tags = ["ai"]
 
 [[rule]]
 pattern = 'AI[-\s](first|native|driven|powered|assisted|ready)'
-tags = ["chat"]
+tags = ["ai"]
 
 [[rule]]
 pattern = 'AI[-\s]?n[áa]stroj\w*'
-tags = ["chat"]
+tags = ["ai"]
 
 [[rule]]
 pattern = 'angular\w*'
@@ -99,7 +99,7 @@ tags = ["hardware"]
 
 [[rule]]
 pattern = 'artificial intelligence'
-tags = ["chat"]
+tags = ["ai"]
 
 [[rule]]
 pattern = 'bootstrap\w*'
@@ -111,27 +111,27 @@ tags = ["c", "cpp"]
 
 [[rule]]
 pattern = 'chat\s?gpt'
-tags = ["chat"]
+tags = ["ai"]
 
 [[rule]]
 pattern = 'claude'
-tags = ["chat"]
+tags = ["ai"]
 
 [[rule]]
 pattern = 'claude code'
-tags = ["chat", "agents"]
+tags = ["ai", "agenticengineering"]
 
 [[rule]]
 pattern = 'codex'
-tags = ["chat", "agents"]
+tags = ["ai", "agenticengineering"]
 
 [[rule]]
 pattern = 'computer vision'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 
 [[rule]]
 pattern = 'copilot'
-tags = ["chat", "agents"]
+tags = ["ai", "agenticengineering"]
 
 [[rule]]
 pattern = 'CSS'
@@ -140,7 +140,7 @@ case_sensitive = true
 
 [[rule]]
 pattern = 'cursor'
-tags = ["chat", "agents"]
+tags = ["ai", "agenticengineering"]
 
 [[rule]]
 pattern = 'céčk\w'
@@ -156,7 +156,7 @@ tags = ["dataanalysis"]
 
 [[rule]]
 pattern = 'deep learning'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 
 [[rule]]
 pattern = 'djang\w+'
@@ -172,7 +172,7 @@ tags = ["csharp"]
 
 [[rule]]
 pattern = 'embedding\w*'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 
 [[rule]]
 pattern = 'excel\w*'
@@ -184,7 +184,7 @@ tags = ["api", "python"]
 
 [[rule]]
 pattern = 'fine[-\s]?tun\w+'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 
 [[rule]]
 pattern = 'flask\w*'
@@ -196,7 +196,7 @@ tags = ["html", "css", "javascript"]
 
 [[rule]]
 pattern = 'gemini'
-tags = ["chat"]
+tags = ["ai"]
 
 [[rule]]
 pattern = 'git'
@@ -208,7 +208,7 @@ tags = ["hardware"]
 
 [[rule]]
 pattern = 'hlubok\w+\s+u[čc]en\w+'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 
 [[rule]]
 pattern = 'HTML'
@@ -221,7 +221,7 @@ tags = ["javascript"]
 
 [[rule]]
 pattern = 'jetbrains ai'
-tags = ["chat", "agents"]
+tags = ["ai", "agenticengineering"]
 
 [[rule]]
 pattern = 'jquery'
@@ -234,7 +234,7 @@ case_sensitive = true
 
 [[rule]]
 pattern = 'keras'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 
 [[rule]]
 pattern = 'kotlin\w*'
@@ -246,7 +246,7 @@ tags = ["docker", "kubernetes"]
 
 [[rule]]
 pattern = 'large\s+language\s+model\w*'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 
 [[rule]]
 pattern = 'linux\w*'
@@ -254,25 +254,25 @@ tags = ["linux"]
 
 [[rule]]
 pattern = 'LLMs?'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 case_sensitive = true
 
 [[rule]]
 pattern = 'machine learning'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 
 [[rule]]
 pattern = 'ML'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 case_sensitive = true
 
 [[rule]]
 pattern = 'MLOps'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 
 [[rule]]
 pattern = 'multi[-\s]?agent\w*'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 
 [[rule]]
 pattern = 'mysql'
@@ -280,15 +280,15 @@ tags = ["database", "mysql"]
 
 [[rule]]
 pattern = 'neural\s+net\w*'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 
 [[rule]]
 pattern = 'neuronov\w+\s+s[íi]t\w+'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 
 [[rule]]
 pattern = 'NLP'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 case_sensitive = true
 
 [[rule]]
@@ -297,7 +297,7 @@ tags = ["javascript", "node"]
 
 [[rule]]
 pattern = 'opencv'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 
 [[rule]]
 pattern = 'pandas'
@@ -309,7 +309,7 @@ tags = ["php"]
 
 [[rule]]
 pattern = 'po[čc][íi]ta[čc]ov\w+\s+vid[ěe]n\w+'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 
 [[rule]]
 pattern = 'postgre\w+'
@@ -321,11 +321,11 @@ tags = ["powerbi"]
 
 [[rule]]
 pattern = 'pracovat\s+agentn\w+'
-tags = ["chat", "agents"]
+tags = ["ai", "agenticengineering"]
 
 [[rule]]
 pattern = 'prompt\s+engineer\w*'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 
 [[rule]]
 pattern = 'python\w*'
@@ -333,11 +333,11 @@ tags = ["python"]
 
 [[rule]]
 pattern = 'pytorch'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 
 [[rule]]
 pattern = 'RAG'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 case_sensitive = true
 
 [[rule]]
@@ -350,7 +350,7 @@ tags = ["javascript", "react"]
 
 [[rule]]
 pattern = 'retrieval[-\s]augmented'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 
 [[rule]]
 pattern = 'RoR'
@@ -377,7 +377,7 @@ case_sensitive = true
 
 [[rule]]
 pattern = 'scikit[-\s]?learn\b|\bsklearn'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 
 [[rule]]
 pattern = 'Spring\s*Framework'
@@ -393,7 +393,7 @@ tags = ["database"]
 
 [[rule]]
 pattern = 'strojov\w+\s+u[čc]en\w+'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 
 [[rule]]
 pattern = 'svelte(kit)?'
@@ -409,7 +409,7 @@ tags = ["css", "tailwind"]
 
 [[rule]]
 pattern = 'tensorflow'
-tags = ["chat", "build"]
+tags = ["ai", "buildingai"]
 
 [[rule]]
 pattern = 'testing'
@@ -430,7 +430,7 @@ tags = ["javascript", "typescript"]
 
 [[rule]]
 pattern = 'um[ěe]l\w*\s+inteligenc\w+'
-tags = ["chat"]
+tags = ["ai"]
 
 [[rule]]
 pattern = 'vector\s?(database|db)'
