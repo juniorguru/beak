@@ -44,4 +44,11 @@ class TechLibTag(StrEnum):
     vue = auto()
 
 
-Tag = TechTag | TechLibTag
+class AITag(StrEnum):
+    chat = auto()
+    agents = auto()
+    build = auto()
+    vibecoding = auto()
+
+
+Tag = TechTag | TechLibTag | AITag

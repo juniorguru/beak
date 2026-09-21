@@ -1,6 +1,6 @@
 import re
 
-from jg.beak.tags import TechLibTag, TechTag
+from jg.beak.tags import AITag, TechLibTag, TechTag
 
 
 MAPPING = {
@@ -65,4 +65,79 @@ MAPPING = {
     re.compile(r"\bRP[iI]\b"): [TechTag.hardware],
     re.compile(r"\brapsberr?ypi\b", re.I): [TechTag.hardware],
     re.compile(r"\barduin\w+", re.I): [TechTag.hardware],
+    re.compile(r"\bAI\b"): [AITag.chat],
+    re.compile(r"\bA\.I\."): [AITag.chat],
+    re.compile(r"\bum[ěe]l\w*\s+inteligenc\w+", re.I): [AITag.chat],
+    re.compile(r"\bartificial\s+intelligence\b", re.I): [AITag.chat],
+    re.compile(r"\bchat\s?gpt\b", re.I): [AITag.chat],
+    re.compile(r"\bgemini\b", re.I): [AITag.chat],
+    re.compile(r"\bclaude\b", re.I): [AITag.chat],
+    re.compile(r"\bAI[-\s]?n[áa]stroj\w*\b", re.I): [AITag.chat],
+    re.compile(r"\bAI\s+tools?\b", re.I): [AITag.chat],
+    re.compile(
+        r"\bAI[-\s](first|native|driven|powered|assisted|ready)\b", re.I
+    ): [AITag.chat],
+    re.compile(r"\bclaude\s+code\b", re.I): [AITag.chat, AITag.agents],
+    re.compile(r"\bcursor\b", re.I): [AITag.chat, AITag.agents],
+    re.compile(r"\bcodex\b", re.I): [AITag.chat, AITag.agents],
+    re.compile(r"\bcopilot\b", re.I): [AITag.chat, AITag.agents],
+    re.compile(
+        r"\b(windsurf|opencode|aider|tabnine|codeium|supermaven)\b", re.I
+    ): [AITag.chat, AITag.agents],
+    re.compile(r"\bjetbrains\s+ai\b", re.I): [AITag.chat, AITag.agents],
+    re.compile(r"\b(ai\s+)?cod\w+\s+agent\w*\b", re.I): [AITag.chat, AITag.agents],
+    re.compile(r"\bagentic\s+(develop\w+|dev|coding)\b", re.I): [
+        AITag.chat,
+        AITag.agents,
+    ],
+    re.compile(
+        r"\b(?:(?:na)?vajb\w*"
+        r"|(?:vibe|vajb)[\s-]?(?:cod|kod|cód|kód)\w+"
+        r"|(?:vibe|vajb)[\s-]?engineering\w*"
+        r"|agentic[\s-]?engineering\w*)\b",
+        re.I,
+    ): [AITag.chat, AITag.agents, AITag.vibecoding],
+    re.compile(r"\bpracovat\s+agentn\w+", re.I): [AITag.chat, AITag.agents],
+    re.compile(r"\bLLMs?\b"): [AITag.chat, AITag.build],
+    re.compile(r"\blarge\s+language\s+model\w*", re.I): [AITag.chat, AITag.build],
+    re.compile(r"\bRAG\b"): [AITag.chat, AITag.build],
+    re.compile(r"\bretrieval[-\s]augmented\b", re.I): [AITag.chat, AITag.build],
+    re.compile(r"\bembedding\w*", re.I): [AITag.chat, AITag.build],
+    re.compile(r"\bfine[-\s]?tun\w+", re.I): [AITag.chat, AITag.build],
+    re.compile(r"\bprompt\s+engineer\w*", re.I): [AITag.chat, AITag.build],
+    re.compile(r"\b(langchain|llama[-\s]?index|semantic\s+kernel)\b", re.I): [
+        AITag.chat,
+        AITag.build,
+    ],
+    re.compile(r"\bvector\s?(database|db)\b", re.I): [TechTag.database],
+    re.compile(r"\bvektorov\w+\s+datab\w+", re.I): [TechTag.database],
+    re.compile(r"\b(pinecone|qdrant|weaviate)\b", re.I): [
+        TechTag.database,
+        AITag.chat,
+        AITag.build,
+    ],
+    re.compile(r"\bmulti[-\s]?agent\w*\b", re.I): [AITag.chat, AITag.build],
+    re.compile(r"\bagentic\s+(architect\w*|system\w*)", re.I): [
+        AITag.chat,
+        AITag.build,
+    ],
+    re.compile(r"\bNLP\b"): [AITag.chat, AITag.build],
+    re.compile(r"\bcomputer\s+vision\b", re.I): [AITag.chat, AITag.build],
+    re.compile(r"\bpo[čc][íi]ta[čc]ov\w+\s+vid[ěe]n\w+", re.I): [
+        AITag.chat,
+        AITag.build,
+    ],
+    re.compile(r"\bmachine\s+learning\b", re.I): [AITag.chat, AITag.build],
+    re.compile(r"\bstrojov\w+\s+u[čc]en\w+", re.I): [AITag.chat, AITag.build],
+    re.compile(r"\bML\b"): [AITag.chat, AITag.build],
+    re.compile(r"\bdeep\s+learning\b", re.I): [AITag.chat, AITag.build],
+    re.compile(r"\bhlubok\w+\s+u[čc]en\w+", re.I): [AITag.chat, AITag.build],
+    re.compile(r"\bneural\s+net\w*", re.I): [AITag.chat, AITag.build],
+    re.compile(r"\bneuronov\w+\s+s[íi]t\w+", re.I): [AITag.chat, AITag.build],
+    re.compile(r"\bMLOps\b", re.I): [AITag.chat, AITag.build],
+    re.compile(r"\btensorflow\b", re.I): [AITag.chat, AITag.build],
+    re.compile(r"\bpytorch\b", re.I): [AITag.chat, AITag.build],
+    re.compile(r"\bscikit[-\s]?learn\b|\bsklearn\b", re.I): [AITag.chat, AITag.build],
+    re.compile(r"\bkeras\b", re.I): [AITag.chat, AITag.build],
+    re.compile(r"\bopencv\b", re.I): [AITag.chat, AITag.build],
 }

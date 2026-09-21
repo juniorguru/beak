@@ -1,0 +1,3 @@
+Budeš stavět LLM aplikace s RAG, embeddingy a prompt engineeringem.
+Zkušenost s LangChain a fine-tuningem vlastních modelů je velkou
+výhodou.

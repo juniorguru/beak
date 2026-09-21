@@ -1,0 +1,2 @@
+Hledáme vývojáře do datového týmu. Budeš pracovat s vektorovou databází
+a navrhovat datové modely v Pythonu.

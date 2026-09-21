@@ -1,0 +1,2 @@
+Hledáme Python vývojáře, který při každodenním vývoji aktivně používá
+Claude Code a Cursor. Práci s AI agenty bereš jako běžnou součást procesu.
