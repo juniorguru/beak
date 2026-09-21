@@ -113,6 +113,10 @@ MAPPING = {
     re.compile(r"\bvektorov\w+\s+datab\w+", re.I): [AITag.chat, AITag.build],
     re.compile(r"\b(pinecone|qdrant|weaviate)\b", re.I): [AITag.chat, AITag.build],
     re.compile(r"\bmulti[-\s]?agent\w*\b", re.I): [AITag.chat, AITag.build],
+    re.compile(r"\bagentic\s+(architect\w*|system\w*)", re.I): [
+        AITag.chat,
+        AITag.build,
+    ],
     re.compile(r"\bNLP\b"): [AITag.chat, AITag.build],
     re.compile(r"\bcomputer vision\b", re.I): [AITag.chat, AITag.build],
     re.compile(r"\bpo[čc][íi]ta[čc]ov\w+\s+vid[ěe]n\w+", re.I): [

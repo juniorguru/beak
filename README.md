@@ -12,8 +12,10 @@ so filtering for `chat` catches everything and the others catch a sharper subset
 - **`chat`** — general AI awareness / chat-level use (the baseline): bare "AI",
   "umělá inteligence", ChatGPT, "AI nástroje", "AI-first", …
 - **`agents`** — uses AI *coding agents*: named tools (Claude Code, Cursor,
-  Codex, Copilot, …) and coding-agent phrasing. Note that bare "AI agent" /
-  "agentic" usually describes *building* agents, so it feeds `build`, not this.
+  Codex, Copilot, …) and coding-agent phrasing. Bare "AI agent" is deliberately
+  not mapped here — it usually means *building* agents, not using a coding
+  assistant, so it only trips the general `AI` → `chat` rule, while "agentic
+  architecture / systems" goes to `build`.
 - **`build`** — *builds* AI / ML features: LLM, RAG, embeddings, prompt
   engineering, LangChain, vector databases, NLP, computer vision, and classic
   machine learning (machine learning, strojové učení, neural networks,
